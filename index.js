@@ -19,6 +19,9 @@ app.use('/api/benefits', require('./routes/benefit.routes'));
 // TeamMembers route
 app.use('/api/team-members', require('./routes/teamMember.routes'));
 
+app.use("/files", express.static("files")); // немесе MinIO proxy route
+
+
 // MongoDB қосу
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB қосылды'))

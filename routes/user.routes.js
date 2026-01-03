@@ -7,7 +7,7 @@ const { updateProfile, changePassword } = require('../controllers/user.controlle
 const { deleteUser, getAllUsers } = require('../controllers/user.controller');
 
 
-router.post('/register', registerValidation, register);
+router.post('/regisForSi', registerValidation, register);
 router.post('/login', loginValidation, login);
 router.put('/update-profile', auth, updateProfile);
 router.put('/change-password', auth, changePassword);
